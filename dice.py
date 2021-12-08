@@ -1,48 +1,44 @@
 import random
 
-
-def ludo(x):
-    c=random.randrange(1,6)
-    while(x=="Y"):
-        if(c==1):
-            print("   ")
-            print(" . ")
-            print("   ")
-            break
-
-        elif(c==2):
-            print(".    ")
-            print("     ")
-            print("    .")
-            break
-
-        elif(c==3):
-            print(".   ")
-            print(" .  ")
-            print("   .")
-            break
-
-        elif(c==4):
-            print(".   .")
-            print("     ")
-            print(".   .")
-            break
-
-        elif(c==5):
-            print(".   .")
-            print("  .  ")
-            print(".   .")
-            break
-
-        elif(c==6):
-            print(" ... ")
-            print("     ")
-            print(" ... ")
-            
-            break
-        else:
-            continue
+x="yes"
+while(x=="yes" or x=="y"):
+    c=random.randint(1,6)
+    if(c==1):
+        print("   ")
+        print(" * ")
+        print("   ")
 
 
-x=input("Press Y to start game\n")
-ludo(x)
+    if(c==2):
+        print("*  ")
+        print("   ")
+        print("  *")
+
+
+    if(c==3):
+        print("*  ")
+        print(" * ")
+        print("  *")
+
+
+    if(c==4):
+        print("* *")
+        print("   ")
+        print("* *")
+
+
+    if(c==5):
+        print("*  *")
+        print("  * ")
+        print("*  *")
+
+
+    if(c==6):
+        print(" * * * ")
+        print("       ")
+        print(" * * * ")
+    
+    x=input("Do you want to play again? yes/y\n")
+    if(x=="no" or x=="n"):
+        print("Thanks for playing games")
+        break
